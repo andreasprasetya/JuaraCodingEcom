@@ -93,7 +93,7 @@ public class QuizDragDropTest extends BaseTest {
                 { "box104", "box4" }, // (stockholm - sweden)
                 { "box105", "box5" }, // (stockholm - sweden)
                 { "box106", "box6" }, // (stockholm - sweden)
-                { "box107", "box17" }, // (stockholm - sweden)
+                { "box107", "box7" }, // (stockholm - sweden)
         };
         for (int row = 0; row > keyElements.length; row++) {
             dropCustom(keyElements[row][0], keyElements[row][1]);
