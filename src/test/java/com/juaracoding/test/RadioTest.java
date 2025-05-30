@@ -28,6 +28,4 @@ public class RadioTest extends BaseTest {
         radio2.click();
         Assert.assertFalse(radio1.isSelected());
     }
-
-    // https://prod.liveshare.vsengsaas.visualstudio.com/join?F892AE9B337EDCF4C9CF89686BF172672F6A
 }

@@ -22,7 +22,7 @@ public class ActionTest extends BaseTest {
         Thread.sleep(10000);
     }
 
-    @Test(enabled = false)
+    @Test
     public void testStep02() {
         WebElement linkHome = driver.findElement(By.linkText("Home"));
         WebElement inputUsername = driver.findElement(By.xpath("//*[@name='userName']"));
@@ -34,6 +34,13 @@ public class ActionTest extends BaseTest {
                 .moveToElement(inputUsername)
                 .pause(Duration.ofSeconds(2))
                 .click()
+                .pause(Duration.ofSeconds(2))
+                .sendKeys("Auah")
+                .pause(Duration.ofSeconds(2))
+                .moveToElement(inputPassword)
+                .pause(Duration.ofSeconds(2))
+                .click()
+                .pause(Duration.ofSeconds(2))
                 .sendKeys("Auah")
                 .pause(Duration.ofSeconds(2))
                 .build();

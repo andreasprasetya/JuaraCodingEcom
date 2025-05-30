@@ -1,3 +1,4 @@
+
 package com.juaracoding.test;
 
 import java.io.File;
@@ -24,10 +25,10 @@ public class ScreenshotHelper {
 
             FileUtils.copyFile(srcFile, destFile);
 
-            // Log ke report testng
+            // Log ke report
+            // TODO: add initiali (@BeforeClass)
             Reporter.log("<a href='" + filePath + "' target='_blank'>Screnshoot</a>");
             Reporter.log("<br /><img src='" + filePath + "' style='width: 20vw;' />");
-
         } catch (Exception e) {
             // TODO: handle exception
             Reporter.log("Gagal ngambil screenshot: " + e.getMessage());

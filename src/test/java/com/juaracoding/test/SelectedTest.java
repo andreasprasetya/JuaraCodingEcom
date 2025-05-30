@@ -1,8 +1,11 @@
+
 package com.juaracoding.test;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SelectedTest extends BaseTest {
@@ -31,9 +34,8 @@ public class SelectedTest extends BaseTest {
     public void testStep03() throws InterruptedException {
         Thread.sleep(1000);
         // selectorBox
-        selectBox.deselectByIndex(1);
-    }
-
-    public static class ByLinkText {
+        // for multiple select
+        // selectBox.deselectByIndex(1);
+        Thread.sleep(2000);
     }
 }

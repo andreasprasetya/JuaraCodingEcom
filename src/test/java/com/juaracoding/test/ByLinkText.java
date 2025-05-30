@@ -36,7 +36,7 @@ public class ByLinkText extends BaseTest {
         System.out.println(daftarLinks.size());
     }
 
-    @Test(enabled = false)
+    @Test
     public void testStep03() {
         WebElement linkPertama = driver.findElement(By.partialLinkText("tag"));
         System.out.println(linkPertama.getAttribute("href"));

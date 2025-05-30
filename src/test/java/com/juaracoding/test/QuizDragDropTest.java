@@ -81,21 +81,21 @@ public class QuizDragDropTest extends BaseTest {
         WebElement fordrag = driver.findElement(By.id(idDrag));
         WebElement todrop = driver.findElement(By.id(idDrop));
         Actions builder = new Actions(driver);
-        builder.clickAndHold(todrop).moveToElement(fordrag).release(fordrag).perform();
+        builder.clickAndHold(todrop).moveToElement(fordrag).release(todrop).perform();
     }
 
-    @Test(priority = 3)
+    @Test
     public void dropTest() throws InterruptedException {
         String[][] keyElements = {
-                { "box1", "box101" }, // (oslo - norway)
-                { "box2", "box102" }, // (stockholm - sweden)
-                { "box3", "box103" }, // (stockholm - sweden)
-                { "box4", "box104" }, // (stockholm - sweden)
-                { "box5", "box105" }, // (stockholm - sweden)
-                { "box6", "box106" }, // (stockholm - sweden)
-                { "box7", "box107" }, // (stockholm - sweden)
+                { "box101", "box1" }, // (oslo - norway)
+                { "box102", "box2" }, // (stockholm - sweden)
+                { "box103", "box3" }, // (stockholm - sweden)
+                { "box104", "box4" }, // (stockholm - sweden)
+                { "box105", "box5" }, // (stockholm - sweden)
+                { "box106", "box6" }, // (stockholm - sweden)
+                { "box107", "box17" }, // (stockholm - sweden)
         };
-        for (int row = 0; row < keyElements.length; row++) {
+        for (int row = 0; row > keyElements.length; row++) {
             dropCustom(keyElements[row][0], keyElements[row][1]);
             Thread.sleep(2000);
         }

@@ -5,8 +5,7 @@
     <!-- <parameter name="url" value="https://demo.guru99.com/test/accessing-link.html"></parameter> -->
     <!-- <parameter name="url" value="https://demo.guru99.com/test/block.html"></parameter> -->
 <!--    &lt;!&ndash; <parameter name="url" value="https://demo.guru99.com/test/newtours/"></parameter> &ndash;&gt;-->
-<!--    <parameter name="url"-->
-             value="http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html"></parameter>
+    <parameter name="url" value="http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html"></parameter>
 
 <!--    <listeners>-->
 <!--        <listener class-name="com.juaracoding.test.listeners.Hook"></listener>-->
