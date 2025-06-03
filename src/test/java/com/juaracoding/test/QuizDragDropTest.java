@@ -76,27 +76,28 @@ public class QuizDragDropTest extends BaseTest {
     }
     // TODO: balikin lagi ke semula!! yaach...
 
-    private void dropCustom(String idDrag, String idDrop) {
-        driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
-        WebElement fordrag = driver.findElement(By.id(idDrag));
-        WebElement todrop = driver.findElement(By.id(idDrop));
+    private void dropCustom(String idCity, String idCountries) {
+//      driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
+        WebElement fordrag = driver.findElement(By.id(idCity));
+        WebElement todrop = driver.findElement(By.id(idCountries));
         Actions builder = new Actions(driver);
-        builder.clickAndHold(todrop).moveToElement(fordrag).release(todrop).perform();
+        builder.clickAndHold(fordrag).moveToElement(todrop).release().perform();
     }
 
     @Test
     public void dropTest() throws InterruptedException {
         String[][] keyElements = {
-                { "box101", "box1" }, // (oslo - norway)
-                { "box102", "box2" }, // (stockholm - sweden)
-                { "box103", "box3" }, // (stockholm - sweden)
-                { "box104", "box4" }, // (stockholm - sweden)
-                { "box105", "box5" }, // (stockholm - sweden)
-                { "box106", "box6" }, // (stockholm - sweden)
-                { "box107", "box7" }, // (stockholm - sweden)
+                { "box1", "box101" }, // (oslo - norway)
+                { "box2", "box102" }, // (stockholm - sweden)
+                { "box3", "box103" }, // (stockholm - sweden)
+                { "box4", "box104" }, // (stockholm - sweden)
+                { "box5", "box105" }, // (stockholm - sweden)
+                { "box6", "box106" }, // (stockholm - sweden)
+                { "box7", "box107" }, // (stockholm - sweden)
         };
-        for (int row = 0; row > keyElements.length; row++) {
-            dropCustom(keyElements[row][0], keyElements[row][1]);
+
+        for (int row = 0; row < keyElements.length; row++) {
+            dragAndDrop(keyElements[row][0], keyElements[row][1]);
             Thread.sleep(2000);
         }
     }
